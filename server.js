@@ -23,8 +23,8 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: 1,
         },
       ],
-     success_url: "https://year-bar.base44.app/yearbar/premium",
-cancel_url: "https://year-bar.base44.app/yearbar/life",
+     success_url: "https://year-bar.base44.app/premium",
+cancel_url: "https://year-bar.base44.app/life",
     });
 
     // ✅ send the checkout link back to the frontend
