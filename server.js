@@ -18,17 +18,20 @@ app.post("/create-checkout-session", async (req, res) => {
           price_data: {
             currency: "usd",
             product_data: { name: "YearBar Premium Access" },
-            unit_amount: 500
+            unit_amount: 500, // $5.00
           },
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
       success_url: "https://YOUR-BASE44-APP-DOMAIN/premium",
-      cancel_url: "https://YOUR-BASE44-APP-DOMAIN/life"
+      cancel_url: "https://YOUR-BASE44-APP-DOMAIN/life",
     });
+
+    // ✅ send the checkout link back to the frontend
     res.json({ url: session.url });
+
   } catch (error) {
-    console.error(error);
+    console.error("Stripe error:", error);
     res.status(500).json({ error: error.message });
   }
 });
