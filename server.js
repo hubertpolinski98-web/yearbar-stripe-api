@@ -23,8 +23,8 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: "https://YOUR-BASE44-APP-DOMAIN/premium",
-      cancel_url: "https://YOUR-BASE44-APP-DOMAIN/life",
+     success_url: "https://app.base44.com/hubertpolinski98-web/yearbar/premium",
+cancel_url: "https://app.base44.com/hubertpolinski98-web/yearbar/life",
     });
 
     // ✅ send the checkout link back to the frontend
